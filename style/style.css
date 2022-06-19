@@ -51,7 +51,12 @@ form ion-icon{
     width: 50px;
     text-align: center;
     font-size: 24px;
-    color: var(--placeholder-color)
+    color: var(--placeholder-color);
+    transition: all 0.2s ease;
+}
+
+form input:valid ~ ion-icon{
+    color: var(--primary-color);
 }
 
 form input{
@@ -63,10 +68,15 @@ form input{
     border-radius: 5px;
     font-size: 18px;
     caret-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
 }
 
 form input::placeholder{
     color: var(--placeholder-color);
+}
+
+form input:valid{
+    border-color: var(--primary-color);
 }
 
 form button{
