@@ -105,4 +105,27 @@ form input:valid ~ button{
 }
 
 /*--------------------- Clicks and URLs are ------------------------*/
-.wrapper .count{}
+.wrapper .count{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding-right: 5px;
+}
+
+.count span{
+    font-size: 17px;
+}
+
+.count span span{
+    font-weight: 500;
+}
+
+.count a{
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    font-size: 17px;
+    padding: 8px 14px;
+    border-radius: 5px;
+}
