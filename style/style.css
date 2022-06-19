@@ -73,6 +73,11 @@ form input{
 
 form input::placeholder{
     color: var(--placeholder-color);
+    transition: all 0.2s ease;
+}
+
+form input:focus::placeholder{
+    color: #646464;
 }
 
 form input:valid{
@@ -98,3 +103,6 @@ form input:valid ~ button{
     opacity: 1;
     pointer-events: auto;
 }
+
+/*--------------------- Clicks and URLs are ------------------------*/
+.wrapper .count{}

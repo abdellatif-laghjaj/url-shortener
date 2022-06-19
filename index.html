@@ -9,11 +9,41 @@
 </head>
 <body>
     <div class="wrapper">
+        <!-- Form -->
         <form action="#" method="post">
             <input type="text" name="url" placeholder="Paste your URL here..." required>
             <ion-icon name="link"></ion-icon>
             <button type="submit">slash</button>
         </form>
+        
+        <!-- Counts -->
+        <div class="count">
+            <span>
+                Total URLs &nbsp; : <span>0</span> <br>
+                Total clicks : <span>0</span>
+            </span>
+        </div>
+
+        <!-- Links -->
+        <div class="urls-area">
+            <!-- List of URLs -->
+            <div class="title">
+                <li>Shortde URL</li>
+                <li>Original URL</li>
+                <li>Clicks</li>
+                <li>Action</li>
+            </div>
+
+            <!-- URLs data -->  
+            <div class="data">
+                <li>shrt.t/xwz</li>
+                <li>https://github.com/abdellatif-laghjaj/</li>
+                <li>2</li>
+                <li>
+                    <ion-icon name="trash-outline"></ion-icon>
+                </li>
+            </div>          
+        </div>
     </div>
 
     <!-- IONICONS -->
