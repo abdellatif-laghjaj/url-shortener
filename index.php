@@ -140,5 +140,8 @@
     <script>
         feather.replace()
     </script>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
 </body>
 </html>
