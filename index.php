@@ -11,7 +11,7 @@
     <div class="wrapper">
         <!-- Form -->
         <form action="#" method="post">
-            <input type="text" name="url" placeholder="Paste your URL here..." required>
+            <input type="text" name="full_url" placeholder="Paste your URL here..." required>
             <i class="url-link" data-feather="link-2"></i>
             <button type="submit">slash</button>
         </form>
