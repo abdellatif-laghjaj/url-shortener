@@ -228,6 +228,7 @@ form input:valid ~ button{
     top: 0;
     left: 0;
     backdrop-filter: blur(2px);
+    display: none;
 }
 
 .popup-box{
@@ -236,8 +237,20 @@ form input:valid ~ button{
     padding: 25px;
     border-radius: 5px;
     box-shadow: 0 8px 5px 10px rgba(0, 0, 0, 0.1);
+    top: 50%;
+    left: 50%;
     max-width: 480px;
     width: 100%;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+}
+
+.popup-box.show{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
 }
 
 .popup-box .info-box{
@@ -252,6 +265,46 @@ form input:valid ~ button{
 .info-box.error{
     color: var(--error-text-color);
     background-color: var(--error-color);
+}
+
+.popup-box form{
+    position: relative;
+    margin-top: 10px;
+}
+
+.popup-box form label{
+    font-size: 18px;
+}
+
+.popup-box form .copy-icon{ 
+    position: absolute;
+    right: 10px;
+    margin-top: 10px; 
+    z-index: 1;
+    top: 50%;
+    cursor: pointer;    
+    font-size: 20px;
+    transition: all 0.2s ease;
+    transform: translateY(-115%);
+}
+
+form .copy-icon:hover{
+    color: var(--primary-color);
+}
+
+.popup-box form input{
+    height: 45px;
+    border: 2px solid var(--secondary-color);
+    padding: 0 35px 0 15px;
+    margin-top: 8px;
+}
+
+.popup-box form button{
+    position: relative;
+    right: 0;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 
