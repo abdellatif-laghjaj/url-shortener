@@ -60,18 +60,18 @@
                             <li>
                                 <a href="">
                                     <?php
-                                        if("localhost/urlshortener/?u=".$row['shorten_url'] > 20){
-                                            echo substr("localhost/urlshortener/?u=".$row['shorten_url'], 0, 20)."...";
+                                        if("localhost/url-shortener/?u=".$row['shorten_url'] > 50){
+                                            echo substr("localhost/url-shortener/?u=".$row['shorten_url'], 0, 50)."...";
                                         }else{
-                                            echo "localhost/urlshortener/?u=".$row['shorten_url'];
+                                            echo "localhost/url-shortener/?u=".$row['shorten_url'];
                                         }
                                     ?>
                                 </a>
                             </li>
                             <li>
                             <?php
-                                if($row['full_url'] > 34){
-                                    echo substr($row['full_url'], 0, 34)."...";
+                                if(strlen($row['full_url']) > 50){
+                                    echo substr($row['full_url'], 0, 50)."...";
                                 }else{
                                     echo $row['full_url'];
                                 }
