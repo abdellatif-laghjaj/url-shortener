@@ -1,6 +1,9 @@
 const form = document.querySelector('.wrapper form'),
     fullUrl = document.querySelector('input'),
-    shortenBtn = document.querySelector('button');
+    shortenBtn = document.querySelector('button'),
+    blurEffect = document.querySelector('.blur-effect'),
+    popupBox = document.querySelector('.popup-box');
+
 
 
 form.onsubmit = (e) => {
@@ -15,12 +18,13 @@ shortenBtn.addEventListener('click', function(e) {
         //if ajax request status is ok or success
         if (xhr.status === 200 && xhr.readyState === 4) {
             let data = xhr.response;
-            console.log(data);
+            if(data.length <= 5) {
+            }else{
+                alert(data);
+            }
         }
-
-        //send form data to php file
-        let formData = new FormData(form);
     }
-    
+    //send form data to php file
+    let formData = new FormData(form);
     xhr.send(formData);
 });
