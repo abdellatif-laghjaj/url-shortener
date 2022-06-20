@@ -141,7 +141,7 @@ form input:valid ~ button{
     scrollbar-width: none;
 }
 
-.urls-area::--webkit-scrollbar{
+.urls-area::-webkit-scrollbar{
     width: 0px;
 }
 
@@ -189,11 +189,11 @@ form input:valid ~ button{
     transition: all 0.2s ease;
 }
 
-.urls-area .data li:last-child{
-    border-right: none;
+.urls-area li:last-child{
+    border-right: 0;
 }
 
-.urls-area .data li:nth-child(odd){
+.urls-area .data:nth-child(odd){
     background-color: var(--tertiary-color);
 }
 
