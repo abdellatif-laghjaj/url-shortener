@@ -217,3 +217,43 @@ form input:valid ~ button{
 .urls-area li:nth-child(4){
     max-width: 14%;
 }
+
+/* --------------------- popup box ------------------------*/
+
+.blur-effect{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.01);
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(2px);
+}
+
+.popup-box{
+    position: absolute;
+    background-color: var(--text-color);
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 8px 5px 10px rgba(0, 0, 0, 0.1);
+    max-width: 480px;
+    width: 100%;
+}
+
+.popup-box .info-box{
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.info-box.error{
+    color: var(--error-text-color);
+    background-color: var(--error-color);
+}
+
+
+
+
