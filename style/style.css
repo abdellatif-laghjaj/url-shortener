@@ -129,3 +129,35 @@ form input:valid ~ button{
     padding: 8px 14px;
     border-radius: 5px;
 }
+
+.wrapper .urls-area{
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    margin-bottom: 5px;    
+}
+
+.urls-area :is(.title, .data){
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.urls-area li{
+    list-style: none;
+    width: 100%;
+    border-right: 1px solid var(--light-gery);
+}
+
+.urls-area .title li{
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+}
+
+.urls-area .data li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    word-break: break-all;
+}
