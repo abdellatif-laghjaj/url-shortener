@@ -1,8 +1,9 @@
 const form = document.querySelector('.wrapper form'),
-    fullUrl = document.querySelector('input'),
-    shortenBtn = document.querySelector('button'),
+    fullUrl = form.querySelector('input'),
+    shortenBtn = form.querySelector('button'),
     blurEffect = document.querySelector('.blur-effect'),
-    popupBox = document.querySelector('.popup-box');
+    popupBox = document.querySelector('.popup-box'),
+    shortenUrl = popupBox.querySelector('input');
 
 
 
@@ -19,6 +20,13 @@ shortenBtn.addEventListener('click', function(e) {
         if (xhr.status === 200 && xhr.readyState === 4) {
             let data = xhr.response;
             if(data.length <= 5) {
+                //if the url successfully shortened
+                blurEffect.style.display = 'block';
+                popupBox.classList.add('show');
+
+                //set the url in the popup box
+                let domain = "short.url/?u=";
+                shortenUrl.value = domain + data;
             }else{
                 alert(data);
             }

@@ -129,7 +129,7 @@
         </div>
         <form action="#">
             <label>Edit your shorten URL</label>
-            <input type="text" placeholder="example.com/abcd" spellcheck="false">
+            <input type="text" value="" spellcheck="false">
             <i class="copy-icon" data-feather="copy"></i>
             <button>Save</button>
         </form>

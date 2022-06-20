@@ -20,7 +20,7 @@
                 $sql3 = mysqli_query($conn, "SELECT shorten_url FROM url WHERE shorten_url = '$ran_url'");
                 if(mysqli_num_rows($sql3) > 0) {
                     $shorten_url = mysqli_fetch_assoc($sql3);
-                    echo "Your short URL is: " . $shorten_url['shorten_url'];
+                    echo $shorten_url['shorten_url'];
                 }
             }else{
                 echo "Something went wrong. Please try again.";
