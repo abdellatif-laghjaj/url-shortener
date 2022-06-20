@@ -1,14 +1,17 @@
 <?php
     include("php/config.php");
-    if(isset($_GET['u'])){
-        $u = mysqli_real_escape_string($conn, $_GET['u']);
-        $sql = mysqli_query($conn, "SELECT full_url FROM url WHERE shorten_url = '$u'");
+    $new_url = "";
+    if(isset($_GET)){
+        foreach($_GET as $key=>$val){
+            $u = mysqli_real_escape_string($conn, $key);
+            //remove / from url
+            $new_url = str_replace("/", "", $u);
+        }
+        $sql = mysqli_query($conn, "SELECT full_url FROM url WHERE shorten_url = '$new_url'");
         if(mysqli_num_rows($sql) > 0) {
             //redirect user to full url
             $full_url = mysqli_fetch_assoc($sql);
             header("Location:".$full_url['full_url']);
-        }else{
-            echo "URL not found.";
         }
     }
 ?>
