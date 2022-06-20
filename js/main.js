@@ -3,6 +3,7 @@ const form = document.querySelector('.wrapper form'),
     shortenBtn = form.querySelector('button'),
     blurEffect = document.querySelector('.blur-effect'),
     popupBox = document.querySelector('.popup-box'),
+    form2 = popupBox.querySelector('form'),
     shortenUrl = popupBox.querySelector('input'),
     saveBtn = popupBox.querySelector('button'),
     copyBtn = popupBox.querySelector('.copy-icon');
@@ -30,6 +31,9 @@ shortenBtn.addEventListener('click', function(e) {
                 let domain = "localhost/url-shortener/";
                 shortenUrl.value = domain + data;
                 
+                form2.onsubmit = (e) => {
+                    e.preventDefault();
+                }
                 //save button
                 saveBtn.onclick = () => {
                     notie.confirm({
