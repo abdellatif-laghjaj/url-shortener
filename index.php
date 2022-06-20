@@ -61,12 +61,12 @@
                         <!-- URLs data -->  
                         <div class="data">
                             <li>
-                                <a href="">
+                                <a href="<?php echo $row['shorten_url'] ?>" target="_blank">
                                     <?php
-                                        if("localhost/url-shortener/?u=".$row['shorten_url'] > 50){
-                                            echo substr("localhost/url-shortener/?u=".$row['shorten_url'], 0, 50)."...";
+                                        if("localhost/url-shortener/".$row['shorten_url'] > 50){
+                                            echo substr("localhost/url-shortener/".$row['shorten_url'], 0, 50)."...";
                                         }else{
-                                            echo "localhost/url-shortener/?u=".$row['shorten_url'];
+                                            echo "localhost/url-shortener/".$row['shorten_url'];
                                         }
                                     ?>
                                 </a>
