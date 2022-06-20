@@ -51,23 +51,28 @@
                             <li>Original URL</li>
                             <li>Clicks</li>
                             <li>Action</li>
-                        </div>
-
+                        </div>       
+                        <?php
+                            while($row = mysqli_fetch_assoc($sql2)) {
+                        ?>
                         <!-- URLs data -->  
                         <div class="data">
-                            <li><a href="">shrt.t/xwz</a></li>
-                            <li>https://github.com/abdellatif-laghjaj/</li>
-                            <li>2</li>
+                            <li><a href=""><?php echo $row['shorten_url']?></a></li>
+                            <li><?php echo $row['full_url']?></li>
+                            <li><?php echo $row['clicks']?></li>
                             <li>
                                 <a href="">
                                     <i data-feather="trash"></i>
                                 </a>
                             </li>
-                        </div>         
+                        </div>
+                        <?php
+                    }
+                    ?>  
                     </div>
                     <?php
                 }
-        ?>
+                ?>
     </div>
 
     <!-- blur effect -->
