@@ -25,7 +25,7 @@ shortenBtn.addEventListener('click', function(e) {
                 popupBox.classList.add('show');
 
                 //set the url in the popup box
-                let domain = "short.url/?u=";
+                let domain = "localhost/url-shortener/?u=";
                 shortenUrl.value = domain + data;
             }else{
                 alert(data);
