@@ -30,108 +30,44 @@
             <i class="url-link" data-feather="link-2"></i>
             <button type="submit">slash</button>
         </form>
-        
-        <!-- Counts -->
-        <div class="count">
-            <span>
-                Total URLs : <span>0</span> and
-                Total clicks : <span>0</span>
-            </span>
-            <a href="">Clear All</a>
-        </div>
 
-        <!-- Links -->
-        <div class="urls-area">
-            <!-- List of URLs -->
-            <div class="title">
-                <li>Shortde URL</li>
-                <li>Original URL</li>
-                <li>Clicks</li>
-                <li>Action</li>
-            </div>
+        <?php
+                $sql2 = mysqli_query($conn, "SELECT * FROM url ORDER BY id DESC");
+                if(mysqli_num_rows($sql2) > 0) {
+                    ?>
+                    <!-- Counts -->
+                    <div class="count">
+                        <span>
+                            Total URLs : <span>0</span> and Total clicks : <span>0</span>
+                        </span>
+                        <a href="">Clear All</a>
+                    </div>
 
-            <!-- URLs data -->  
-            <div class="data">
-                <li><a href="">shrt.t/xwz</a></li>
-                <li>https://github.com/abdellatif-laghjaj/</li>
-                <li>2</li>
-                <li>
-                    <a href="">
-                        <i data-feather="trash"></i>
-                    </a>
-                </li>
-            </div> 
-            <div class="data">
-                <li><a href="">shrt.t/xwz</a></li>
-                <li>https://github.com/abdellatif-laghjaj/</li>
-                <li>2</li>
-                <li>
-                    <a href="">
-                        <i data-feather="trash"></i>
-                    </a>
-                </li>
-            </div> 
-            <div class="data">
-                <li><a href="">shrt.t/xwz</a></li>
-                <li>https://github.com/abdellatif-laghjaj/</li>
-                <li>2</li>
-                <li>
-                    <a href="">
-                        <i data-feather="trash"></i>
-                    </a>
-                </li>
-            </div> 
-            <div class="data">
-                <li><a href="">shrt.t/xwz</a></li>
-                <li>https://github.com/abdellatif-laghjaj/</li>
-                <li>2</li>
-                <li>
-                    <a href="">
-                        <i data-feather="trash"></i>
-                    </a>
-                </li>
-            </div> 
-            <div class="data">
-                <li><a href="">shrt.t/xwz</a></li>
-                <li>https://github.com/abdellatif-laghjaj/</li>
-                <li>2</li>
-                <li>
-                    <a href="">
-                        <i data-feather="trash"></i>
-                    </a>
-                </li>
-            </div> 
-            <div class="data">
-                <li><a href="">shrt.t/xwz</a></li>
-                <li>https://github.com/abdellatif-laghjaj/</li>
-                <li>2</li>
-                <li>
-                    <a href="">
-                        <i data-feather="trash"></i>
-                    </a>
-                </li>
-            </div> 
-            <div class="data">
-                <li><a href="">shrt.t/xwz</a></li>
-                <li>https://github.com/abdellatif-laghjaj/</li>
-                <li>2</li>
-                <li>
-                    <a href="">
-                        <i data-feather="trash"></i>
-                    </a>
-                </li>
-            </div> 
-            <div class="data">
-                <li><a href="">shrt.t/xwz</a></li>
-                <li>https://github.com/abdellatif-laghjaj/</li>
-                <li>2</li>
-                <li>
-                    <a href="">
-                        <i data-feather="trash"></i>
-                    </a>
-                </li>
-            </div>          
-        </div>
+                    <!-- Links -->
+                    <div class="urls-area">
+                        <!-- List of URLs -->
+                        <div class="title">
+                            <li>Shortde URL</li>
+                            <li>Original URL</li>
+                            <li>Clicks</li>
+                            <li>Action</li>
+                        </div>
+
+                        <!-- URLs data -->  
+                        <div class="data">
+                            <li><a href="">shrt.t/xwz</a></li>
+                            <li>https://github.com/abdellatif-laghjaj/</li>
+                            <li>2</li>
+                            <li>
+                                <a href="">
+                                    <i data-feather="trash"></i>
+                                </a>
+                            </li>
+                        </div>         
+                    </div>
+                    <?php
+                }
+        ?>
     </div>
 
     <!-- blur effect -->
