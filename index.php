@@ -57,8 +57,26 @@
                         ?>
                         <!-- URLs data -->  
                         <div class="data">
-                            <li><a href=""><?php echo $row['shorten_url']?></a></li>
-                            <li><?php echo $row['full_url']?></li>
+                            <li>
+                                <a href="">
+                                    <?php
+                                        if("localhost/urlshortener/?u=".$row['shorten_url'] > 20){
+                                            echo substr("localhost/urlshortener/?u=".$row['shorten_url'], 0, 20)."...";
+                                        }else{
+                                            echo "localhost/urlshortener/?u=".$row['shorten_url'];
+                                        }
+                                    ?>
+                                </a>
+                            </li>
+                            <li>
+                            <?php
+                                if($row['full_url'] > 34){
+                                    echo substr($row['full_url'], 0, 34)."...";
+                                }else{
+                                    echo $row['full_url'];
+                                }
+                            ?>
+                            </li>
                             <li><?php echo $row['clicks']?></li>
                             <li>
                                 <a href="">
