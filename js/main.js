@@ -32,10 +32,30 @@ shortenBtn.addEventListener('click', function(e) {
                 
                 //save button
                 saveBtn.onclick = () => {
-                    location.reload();
+                    notie.confirm({
+                        text: 'Are you sure you want to save this url?',
+                        submitCallback: function() {
+                            location.reload();
+                        }
+                    });
+                }
+
+                //copy button
+                copyBtn.onclick = () => {
+                    shortenUrl.select();
+                    document.execCommand('copy');
+                    notie.alert({
+                        type: 'success',
+                        text: 'Copied to clipboard',
+                        time: 2
+                    });
                 }
             }else{
-                alert(data);
+                notie.alert({
+                    type: 'error',
+                    text: data,
+                    time: 2
+                });
             }
         }
     }
