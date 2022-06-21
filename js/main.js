@@ -45,12 +45,20 @@ shortenBtn.addEventListener('click', function(e) {
                                 //if ajax request status is ok or success
                                 if (xhr2.status === 200 && xhr2.readyState === 4) {
                                     let data = xhr2.response;
-                                    //convert the json to object
-                                    let obj = JSON.parse(data);
-                                    notie.alert({
-                                        type: obj.type,
-                                        text: obj.message
-                                    });
+                                    if(data === 'success') {
+                                        notie.alert({
+                                            type: 1,
+                                            text: 'Url saved successfully!'
+                                        });
+                                        setTimeout(() => {
+                                            location.reload();
+                                        }, 1000);
+                                    }else {
+                                        notie.alert({
+                                            type: 3,
+                                            text: data
+                                        });
+                                    }
                                 }
                             }
                             let short_url = shortenUrl.value;
