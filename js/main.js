@@ -39,7 +39,22 @@ shortenBtn.addEventListener('click', function(e) {
                     notie.confirm({
                         text: 'Are you sure you want to save this url?',
                         submitCallback: function() {
-                            location.reload();
+                            let xhr2 = new XMLHttpRequest();
+                            xhr2.open('POST', 'php/save_url.php', true);
+                            xhr2.onload = () => {
+                                //if ajax request status is ok or success
+                                if (xhr2.status === 200 && xhr2.readyState === 4) {
+                                    let data = xhr2.response;
+                                    notie.alert({
+                                        type: 'success',
+                                        text: data
+                                    });
+                                }
+                            }
+                            let short_url = shortenUrl.value;
+                            let hidden_url = data;
+                            xhr2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                            xhr2.send("shorten_url=" + short_url + "&hidden_url=" + hidden_url);
                         }
                     });
                 }
