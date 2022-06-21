@@ -45,9 +45,11 @@ shortenBtn.addEventListener('click', function(e) {
                                 //if ajax request status is ok or success
                                 if (xhr2.status === 200 && xhr2.readyState === 4) {
                                     let data = xhr2.response;
+                                    //convert the json to object
+                                    let obj = JSON.parse(data);
                                     notie.alert({
-                                        type: 'success',
-                                        text: data
+                                        type: obj.type,
+                                        text: obj.message
                                     });
                                 }
                             }
