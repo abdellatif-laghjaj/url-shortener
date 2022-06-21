@@ -6,7 +6,8 @@ const form = document.querySelector('.wrapper form'),
     form2 = popupBox.querySelector('form'),
     shortenUrl = popupBox.querySelector('input'),
     saveBtn = popupBox.querySelector('button'),
-    copyBtn = popupBox.querySelector('.copy-icon');
+    copyBtn = popupBox.querySelector('.copy-icon'),
+    infoBox = popupBox.querySelector('.info-box');
 
 
 
@@ -58,6 +59,8 @@ shortenBtn.addEventListener('click', function(e) {
                                             type: 3,
                                             text: data
                                         });
+                                        infoBox.innerHTML = data;
+                                        infoBox.classList.add('error');
                                     }
                                 }
                             }
