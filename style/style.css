@@ -30,6 +30,32 @@ body {
     padding: 10px;
 }
 
+/* COPYRIGHT */
+
+.copyright{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--main-padding);
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.copyright p a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
 .wrapper {
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);

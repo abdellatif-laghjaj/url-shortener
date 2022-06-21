@@ -123,6 +123,13 @@
         </form>
     </div>
 
+
+    <section class="copyright">
+      <p>
+        Made with ❤️ by <a href="https://github.com/abdellatif-laghjaj" target="_blank">Abdellatif Laghjaj</a>
+      </p>
+    </section>
+
     <!-- ICONS -->
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
