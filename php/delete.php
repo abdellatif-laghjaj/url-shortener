@@ -6,8 +6,25 @@
         if($sql){
             header("Location: ../");
         }else{
-            echo "Something went wrong. Please try again.";
             header("Location: ../");
         }
+    }else{
+        header("Location: ../");
+    }
+
+    if(isset($_GET['delete'])){
+        $delete = mysqli_real_escape_string($conn, $_GET['delete']);
+        if($delete == "all"){
+            $sql = mysqli_query($conn, "DELETE FROM url");
+            if($sql){
+                header("Location: ../");
+            }else{
+                header("Location: ../");
+            }
+        }else{
+            header("Location: ../");
+        }
+    }else{
+        header("Location: ../");
     }
 ?>
