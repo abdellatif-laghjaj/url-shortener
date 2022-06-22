@@ -94,7 +94,7 @@
                             <li><?php echo $row['clicks']?></li>
                             <li>
                                 <a href="php/delete.php?id=<?php echo $row['shorten_url'] ?>">
-                                    <i data-feather="trash"></i>
+                                    <i data-feather="trash-2"></i>
                                 </a>
                             </li>
                         </div>
