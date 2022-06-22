@@ -7,8 +7,8 @@
 }
 
 :root {
-  --primary-color: #495af7;
-  --secondary-color: #9ba5ff;
+  --primary-color: #06283D;
+  --secondary-color: #1363DF;
     --tertiary-color: rgba(0, 0, 0, 0.1);
   --text-color: #fff;
   --placeholder-color: rgb(82, 80, 80);
@@ -57,12 +57,12 @@ body {
     font-weight: 500;
 }
 .wrapper {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding: 10px;
     width: 800px;
 }
