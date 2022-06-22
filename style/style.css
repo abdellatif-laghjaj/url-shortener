@@ -302,6 +302,7 @@ form input:valid ~ button{
 
 .popup-box form label{
     font-size: 18px;
+    color: rgb(22, 21, 21);
 }
 
 .popup-box form .copy-icon{ 
