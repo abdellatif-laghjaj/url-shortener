@@ -32,4 +32,3 @@
     }else{
         echo "Please enter a short URL";
     }
-?>
